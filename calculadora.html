@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html  lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+    </head>
+
+<style> /* Css Incorporada */
+    body{
+         background-color: aquamarine;
+         background-image: linear-gradient(to right,aquamarine,#b8b8ca);
+    }
+    /* Botões */
+    input[type=button]{
+        border-radius: 999px;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(61, 61, 61);
+        box-shadow: 0px 0px 5px #000;
+        font-size: 20px;
+        font-family: tahoma;
+        color: #FFF;
+        margin-bottom: 8px;
+        /*margin-right: 6px;*/
+        cursor: pointer;/* Para exibir mão ao passar mouse */  
+        outline: none;/* tira formatação padrão */
+        border: none;
+    }
+   
+
+    /* Visor */
+    input[type=text]{
+        text-align: right;
+        outline: none;/* tira formatação do contorno */
+        background-color: #678;
+        border: none;
+        font-weight: bold;/* negrito */
+        font-family: digital;
+        font-size: 28px;
+        color: #FFF;
+        width: 250px;
+        height: 40px;
+       
+    }
+    /* Botões Laranja */
+    input[type=button].cor{
+        background-color: #FF8C00 ;
+        color:  rgb(22, 20, 20)
+        font-weight: bold;
+    
+    }
+    input[type=button]:hover{
+        background-image: linear-gradient(to right,#fc7609,#9393a0);
+    }
+    /* Botão Limpar */
+    input[type=button].limpar{
+        background: rgb(133, 128, 128);
+    }
+    /* Titulo Calculadora */
+    h2{
+        color: white;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+    }
+    #tudo{
+        border-radius: 10px;
+        border: solid rgb(160, 157, 154);
+        box-shadow: 0px 0px 8px #000;
+
+    }
+
+
+</style>
+
+<body>
+ 
+<center>
+
+    <form name="calculadora">
+        <table id="tudo" width="250" bgcolor="#789"> <!-- boder: 6 -->
+            <tr><!-- Linha -->
+                <th><h2>CALCULADORA</h2></th><!-- Centraliza e negrito -->
+            </tr>
+            <tr>
+                <td><!-- Coluna -->
+                    <input type="text" name="visor" size="30" readonly><!-- readonly apenas leitura -->
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <br><input type="button" name="um" value=" 1 " onclick=" calculadora.visor.value += '1'">
+                    <input type="button" name="dois" value=" 2 " onclick=" calculadora.visor.value += '2'"><!-- Da direita pra esquerda "+=" concatena -->
+                    <input type="button" name="tres" value=" 3 " onclick=" calculadora.visor.value += '3'">
+                    <input type="button" name="soma" value=" + " class="cor" onclick=" calculadora.visor.value += '+'">
+                    <br>
+                    <input type="button" name="quatro" value=" 4 " onclick=" calculadora.visor.value += '4'">
+                    <input type="button" name="cinco" value=" 5 " onclick=" calculadora.visor.value += '5'">
+                    <input type="button" name="seis" value=" 6 " onclick=" calculadora.visor.value += '6'">
+                    <input type="button" name="menos" value=" - " class="cor" onclick=" calculadora.visor.value += '-'">
+                    <br>
+                    <input type="button" name="sete" value=" 7 " onclick=" calculadora.visor.value += '7'">
+                    <input type="button" name="oito" value=" 8 " onclick=" calculadora.visor.value += '8'">
+                    <input type="button" name="nove" value=" 9 " onclick=" calculadora.visor.value += '9'">
+                    <input type="button" name="multi" value=" x " class="cor" onclick="calculadora.visor.value += '*'">
+                    <br>
+                    <input type="button" name="limpar" value=" C " class="limpar" onclick="calculadora.visor.value = ' '">
+                    <input type="button" name="zero" value=" 0 " onclick=" calculadora.visor.value += '0'">  
+                    <input type="button" name="resultado" value=" = " class="cor" onclick="calculadora.visor.value = eval(calculadora.visor.value)"> <!-- "eval" Calcular expressão matematica de dentro do visor e ezibindo no mesmo -->
+                    <input type="button" name="div" value=" / " class="cor" onclick="calculadora.visor.value += '/'">
+
+
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
