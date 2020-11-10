@@ -4,84 +4,14 @@
     <head>
         <meta charset="UTF-8">
         <title>Calculadora</title>
-    </head>
-
-<style> /* Css Incorporada */
-    body{
-         background-color: rgb(120, 221, 187);
-         background-image: linear-gradient(to right,aquamarine,#b8b8ca);
-    }
-    /* Botões */
-    input[type=button]{
-        border-radius: 999px;
-        width: 50px;
-        height: 50px;
-        background-color: rgb(61, 61, 61);
-        box-shadow: 0px 0px 5px #000;
-        font-size: 20px;
-        font-family: tahoma;
-        color: #FFF;
-        margin-bottom: 8px;
-        /*margin-right: 6px;*/
-        cursor: pointer;/* Para exibir mão ao passar mouse */  
-        outline: none;/* tira formatação padrão */
-        border: none;
-    }
-   
-
-    /* Visor */
-    input[type=text]{
-        text-align: right;
-        outline: none;/* tira formatação do contorno */
-        background-color: #678;
-        border: none;
-        font-weight: bold;/* negrito */
-        font-family: digital;
-        font-size: 28px;
-        color: #FFF;
-        width: 250px;
-        height: 40px;
-       
-    }
-    /* Botões Laranja */
-    input[type=button].cor{
-        background-color: #FF8C00 ;
-        color:  rgb(22, 20, 20)
-        font-weight: bold;
-    
-    }
-    input[type=button]:hover{
-        background-image: linear-gradient(to right,#fc7609,#9393a0);
-    }
-    /* Botão Limpar */
-    input[type=button].limpar{
-        background: rgb(133, 128, 128);
-    }
-    /* Titulo Calculadora */
-    h2{
-        color: white;
-        font-size: 30px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: bold;
-        text-align: center;
-        margin: 0;
-    }
-    #tudo{
-        border-radius: 10px;
-        border: solid rgb(160, 157, 154);
-        box-shadow: 0px 0px 8px #000;
-
-    }
-
-
-</style>
-
+        <link rel="stylesheet" href="style.css">
+    </head> 
 <body>
  
 <center>
 
     <form name="calculadora">
-        <table id="tudo" width="250" bgcolor="#789"> <!-- boder: 6 -->
+        <table id="tudo"> <!-- boder: 6 -->
             <tr><!-- Linha -->
                 <th><h2>CALCULADORA</h2></th><!-- Centraliza e negrito -->
             </tr>
